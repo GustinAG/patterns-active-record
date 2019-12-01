@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4e92369b-3101-4930-9d8e-5efe1cb221cf" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="88e08f54-965f-45f7-a0f3-b8501a796bd6" name="Presentation Layer" requiredNamespace="ActiveRecord.CheckOutGUI">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="17aa0278-1126-4e99-a0ec-fb50d3b1737f" direction="Forward">
+          <layerMoniker Id="15a06955-514e-43c0-bf83-1d860ffc2e14" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="f3ef6a63-56ff-4c3d-9aae-b8c92438cb42" name="CheckOutGUI">
+          <references>
+            <reference Id="eca0374d-af69-4b18-8594-b1bd98e89808" name="CheckOutGUI">
+              <ArtifactNode Label="CheckOutGUI" Category="CodeSchema_Project" Id="(Assembly=../CheckOutGUI/CheckOutGUI.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=ActiveRecord.CheckOutGUI)" Label="ActiveRecord.CheckOutGUI.exe" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.exe" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="15a06955-514e-43c0-bf83-1d860ffc2e14" name="Business Layer" requiredNamespace="ActiveRecord.BusinessLogic">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="ac7f730c-68f4-4f74-bf75-14d82aa8aca0" direction="Forward">
+          <layerMoniker Id="82773bad-64ce-4305-97d7-0105f7d324d5" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="b2801462-9874-4a70-86cc-bc9dcc6bb525" name="BusinessLogic">
+          <references>
+            <reference Id="0b80b959-1437-4e99-a05c-edeacc232b48" name="BusinessLogic">
+              <ArtifactNode Label="BusinessLogic" Category="CodeSchema_Project" Id="(Assembly=../BusinessLogic/BusinessLogic.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=ActiveRecord.BusinessLogic)" Label="ActiveRecord.BusinessLogic.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="82773bad-64ce-4305-97d7-0105f7d324d5" name="Infrastructure Layer" requiredNamespace="ActiveRecord.DataAccess">
+      <childLayers>
+        <layer Id="cef49e4c-8cdf-47a6-9b9b-c17fbfed2904" name="DataAccess">
+          <references>
+            <reference Id="614297d1-90da-4282-9129-1e6d723b4a41" name="DataAccess">
+              <ArtifactNode Label="DataAccess" Category="CodeSchema_Project" Id="(Assembly=../DataAccess/DataAccess.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=ActiveRecord.DataAccess)" Label="ActiveRecord.DataAccess.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

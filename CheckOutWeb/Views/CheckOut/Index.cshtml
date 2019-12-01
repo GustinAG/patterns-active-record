@@ -1,0 +1,62 @@
+﻿@model ActiveRecord.CheckOutWeb.Models.CheckOut
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Check-Out</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.HiddenFor(m => m.BillId)
+        @Html.TextBoxFor(m => m.ScannedCode)
+        <input type="submit" value="Scan" />
+    </p>
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.Bill.Products[0].Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Bill.Products[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Bill.Products[0].UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Bill.Products[0].TotalPrice)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var product in Model.Bill.Products)
+        {
+            <tr>
+                <td>
+                    @product.Count
+                </td>
+                <td>
+                    @product.Name
+                </td>
+                <td>
+                    @product.UnitPrice
+                </td>
+                <td>
+                    @product.TotalPrice
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total:</td>
+            <td>@Model.TotalPrice</td>
+        </tr>
+    </tfoot>
+</table>

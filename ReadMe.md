@@ -13,7 +13,6 @@ Also, in a real life, complex project, you would like to utilize an ootb Active 
     + .NET Framework 4.7
     + Markdown Editor
     + StyleCop
-    + optional: Target Framework Migrator
  + Also recommended:
     + ReSharper
     + TortoiseGit

@@ -13,10 +13,11 @@ namespace ActiveRecord.CheckOutWeb.Tests
         {
             // Arrange
             var service = Substitute.For<ICheckOutService>();
-            var controller = new CheckOutController(service);
-
-            // Act
-            controller.Index(new Models.CheckOut(null));
+            using (var controller = new CheckOutController(service))
+            {
+                // Act
+                controller.Index(new Models.CheckOut(null));
+            }
 
             // Assert
             service.Received().Resume(Arg.Any<int>());

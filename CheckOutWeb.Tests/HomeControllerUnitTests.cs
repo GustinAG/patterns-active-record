@@ -1,4 +1,5 @@
-﻿using ActiveRecord.CheckOutWeb.Controllers;
+﻿using System.Web.Mvc;
+using ActiveRecord.CheckOutWeb.Controllers;
 using ActiveRecord.CheckOutWeb.Models;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -12,10 +13,12 @@ namespace ActiveRecord.CheckOutWeb.Tests
         public void Index_ShouldReturnSomeAppName()
         {
             // Arrange
-            var controller = new HomeController();
-
-            // Act
-            var result = controller.Index();
+            ViewResult result;
+            using (var controller = new HomeController())
+            {
+                // Act
+                result = controller.Index();
+            }
 
             // Assert
             var info = result.ShouldHaveModel<AppInfo>();
@@ -26,10 +29,12 @@ namespace ActiveRecord.CheckOutWeb.Tests
         public void About_ShouldReturnSomeCopyrightText()
         {
             // Arrange
-            var controller = new HomeController();
-
-            // Act
-            var result = controller.About();
+            ViewResult result;
+            using (var controller = new HomeController())
+            {
+                // Act
+                result = controller.About();
+            }
 
             // Assert
             var info = result.ShouldHaveModel<AppInfo>();
@@ -40,10 +45,12 @@ namespace ActiveRecord.CheckOutWeb.Tests
         public void Contact_ShouldReturnSomeSupportEmail()
         {
             // Arrange
-            var controller = new HomeController();
-
-            // Act
-            var result = controller.Contact();
+            ViewResult result;
+            using (var controller = new HomeController())
+            {
+                // Act
+                result = controller.Contact();
+            }
 
             // Assert
             var info = result.ShouldHaveModel<ContactInfo>();

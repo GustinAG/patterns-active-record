@@ -18,7 +18,7 @@
 
         public static ProductDTO GetProduct(long code)
         {
-            code = code % Products.Length;
+            code %= Products.Length;
             ProductDTO product = Products[code];
             product.Code = (int)code;
 

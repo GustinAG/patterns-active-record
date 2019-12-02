@@ -20,7 +20,7 @@ namespace ActiveRecord.CheckOutWeb.Models
             var type = HttpContext.Current.ApplicationInstance.GetType();
             while (type != null && type.Namespace == "ASP") type = type.BaseType;
 
-            return type == null ? null : type.Assembly;
+            return type?.Assembly;
         }
     }
 }

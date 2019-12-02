@@ -1,4 +1,5 @@
-﻿using ActiveRecord.BusinessLogic;
+﻿using System.Web.Mvc;
+using ActiveRecord.BusinessLogic;
 using ActiveRecord.CheckOutWeb.Controllers;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -12,10 +13,12 @@ namespace ActiveRecord.CheckOutWeb.Tests
         public void Index_ShouldReturnZeroTotalFirst()
         {
             // Arrange
-            var controller = new CheckOutController(new CheckOutServices());
-
-            // Act
-            var result = controller.Index();
+            ViewResult result;
+            using (var controller = new CheckOutController(new CheckOutServices()))
+            {
+                // Act
+                result = controller.Index();
+            }
 
             // Assert
             var checkOut = result.ShouldHaveModel<Models.CheckOut>();
@@ -26,11 +29,14 @@ namespace ActiveRecord.CheckOutWeb.Tests
         public void Index_ShouldReturnPositiveTotal_WhenSomethingScanned()
         {
             // Arrange
-            var controller = new CheckOutController(new CheckOutServices());
-            controller.Index(new Models.CheckOut(null) { ScannedCode = 5 });
+            ViewResult result;
+            using (var controller = new CheckOutController(new CheckOutServices()))
+            {
+                controller.Index(new Models.CheckOut(null) { ScannedCode = 5 });
 
-            // Act
-            var result = controller.Index();
+                // Act
+                result = controller.Index();
+            }
 
             // Assert
             var checkOut = result.ShouldHaveModel<Models.CheckOut>();

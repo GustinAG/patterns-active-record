@@ -1,3 +1,5 @@
+[![Build Status](https://gustinn.visualstudio.com/Exp/_apis/build/status/GustinAG.patterns-active-record?branchName=master)](https://gustinn.visualstudio.com/Exp/_build/latest?definitionId=4&branchName=master)
+
 # Goal of This
 Demontsrating these architecture paterns within working code in a very simplified way.
 This might help better understand them.

@@ -1,15 +1,14 @@
 # What You Need For This
- + Tortoise SVN
- + Visual Studio 2019 - incl.:
+ + Visual Studio 2019 - *or higher* - incl.:
     + C# stuff
     + .NET Framework 4.7
-    + Code Tools
-    + recommended extensions:
-       + Markdown Editor
-       + Target Framework Migrator
-       + StyleCop
-       + ReSharper
-       + VisualSVN
+    + Markdown Editor
+    + StyleCop
+    + optional: Target Framework Migrator
+ + Also recommended:
+    + ReSharper
+    + TortoiseGit
+    + Notepad++ including XML Tools
 
 # Architecture Patterns <br /> <small> *covered in this sample* </small>
  + **A**ctive **R**ecord

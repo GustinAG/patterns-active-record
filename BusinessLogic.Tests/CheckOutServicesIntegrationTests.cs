@@ -56,12 +56,5 @@ namespace ActiveRecord.BusinessLogic.Tests
             bill.TotalPrice.Should().BePositive();
             bill.Products.Should().HaveCount(1);
         }
-
-        [TestMethod]
-        public void BreakBuild()
-        {
-            // Test what happens if I break the build - with a failed unit test?
-            true.Should().BeFalse("Just to test breaking the CI build...");
-        }
     }
 }

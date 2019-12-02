@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2011
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{08D84689-1765-4CED-88A9-887C5D063A5E}"
 EndProject
@@ -21,8 +21,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Business", "2 - Business", "{A5A16C2F-B899-4B17-86DD-0767FD73F68B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{266BE33E-1DEA-444A-87B7-ADFB2C4199C2}"
-EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Architecture", "Architecture\Architecture.modelproj", "{AD07E6B9-8DB3-43C9-995F-AC2D28571EAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.Tests", "BusinessLogic.Tests\BusinessLogic.Tests.csproj", "{ECBFFB75-ECA6-48B9-BF3C-11E5BBC6A3F2}"
 EndProject
@@ -50,10 +48,6 @@ Global
 		{235728CD-EC18-4213-8634-0422200B3A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{235728CD-EC18-4213-8634-0422200B3A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{235728CD-EC18-4213-8634-0422200B3A36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD07E6B9-8DB3-43C9-995F-AC2D28571EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD07E6B9-8DB3-43C9-995F-AC2D28571EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD07E6B9-8DB3-43C9-995F-AC2D28571EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD07E6B9-8DB3-43C9-995F-AC2D28571EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ECBFFB75-ECA6-48B9-BF3C-11E5BBC6A3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ECBFFB75-ECA6-48B9-BF3C-11E5BBC6A3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECBFFB75-ECA6-48B9-BF3C-11E5BBC6A3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU

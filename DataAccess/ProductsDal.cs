@@ -13,7 +13,9 @@
             new ProductDTO { Name = "Milk", Price = 0.65M },
             new ProductDTO { Name = "Sugar", Price = 0.43M },
             new ProductDTO { Name = "Cucumber", Price = 0.25M },
-            new ProductDTO { Name = "Crescent", Price = 0.2M }
+            new ProductDTO { Name = "Crescent", Price = 0.2M },
+            new ProductDTO { Name = "Handkerchief", Price = 0.98M },
+            new ProductDTO { Name = "Pencil", Price = 0.5M }
         };
 
         public static ProductDTO GetProduct(long code)

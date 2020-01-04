@@ -11,6 +11,7 @@ namespace ActiveRecord.CheckOutWeb.Models
         public string Title { get; } = EntryAssembly.GetCustomAttribute<AssemblyDescriptionAttribute>().Description;
         public string CompanyName { get; } = EntryAssembly.GetCustomAttribute<AssemblyCompanyAttribute>().Company;
         public string Copyright { get; } = EntryAssembly.GetCustomAttribute<AssemblyCopyrightAttribute>().Copyright;
+        public string Version { get; } = EntryAssembly.GetName().Version.ToString();
 
         // Based on: http://stackoverflow.com/questions/4277692/getentryassembly-for-web-applications
         private static Assembly GetWebEntryAssembly()
